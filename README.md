@@ -2,7 +2,7 @@
 
 A native Linux port of the Android version of Grand Theft Auto Chinatown Wars, 
 targeting the R36S handheld (Rockchip RK3326, Cortex-A35, Mali-400)
-running ArkOS — and tested working on R36S clones with Mali-Bifrost G31.
+running dArkOS — and tested working on R36S clones with Mali-Bifrost G31.
 
 The port loads the original Android `libCTW.so` directly inside a small Linux
 host binary that emulates just enough of Android's runtime (JNI vtable,
@@ -18,6 +18,7 @@ Fully working:
 - All rendering programs (world, lit geometry, animated sprites, HUD/minimap)
 - Sound effects + radio / music streaming (mpg123 + OpenAL)
 - Gamepad input
+- Touchscreen (if the device supports it - Tested on a RG353V)
 - Save games
 
 Graphics quality enabled:
@@ -27,7 +28,7 @@ Graphics quality enabled:
 
 ---
 
-## You need to supply
+## What you need to supply
 
 These files come from the legitimate Android version of the game (Google Play
 or your own sideload). They are NOT in this repo for copyright reasons.
