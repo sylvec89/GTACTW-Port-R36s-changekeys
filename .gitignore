@@ -1,0 +1,31 @@
+# Build artifacts
+*.o
+*.so
+gtactw_r36
+gtactw_r36.debug
+
+# User-owned game content — MUST NEVER be committed (Rockstar copyright)
+*.apk
+*.obb
+libCTW.so
+libImmEmulatorJ.so
+
+# Local working directories
+armhf-sysroot/
+extracted/
+data/
+output/
+release/gtactw/gtactw_r36
+release/gtactw/libclock_fix.so
+release/gtactw/libCTW.so
+
+# Editors / OS
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
