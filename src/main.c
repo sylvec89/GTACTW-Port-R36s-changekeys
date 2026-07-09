@@ -496,10 +496,10 @@ int ProcessEvents(void) {
     /* Update gamepad state */
     if (g_gamepad) {
         int mask = 0;
-        if (SDL_GameControllerGetButton(g_gamepad, SDL_CONTROLLER_BUTTON_A))         mask |= 0x001;
-        if (SDL_GameControllerGetButton(g_gamepad, SDL_CONTROLLER_BUTTON_B))         mask |= 0x002;
-        if (SDL_GameControllerGetButton(g_gamepad, SDL_CONTROLLER_BUTTON_X))         mask |= 0x004;
-        if (SDL_GameControllerGetButton(g_gamepad, SDL_CONTROLLER_BUTTON_Y))         mask |= 0x008;
+        if (SDL_GameControllerGetButton(g_gamepad, SDL_CONTROLLER_BUTTON_B))         mask |= 0x001;
+        if (SDL_GameControllerGetButton(g_gamepad, SDL_CONTROLLER_BUTTON_A))         mask |= 0x002;
+        if (SDL_GameControllerGetButton(g_gamepad, SDL_CONTROLLER_BUTTON_Y))         mask |= 0x004;
+        if (SDL_GameControllerGetButton(g_gamepad, SDL_CONTROLLER_BUTTON_X))         mask |= 0x008;
         if (SDL_GameControllerGetButton(g_gamepad, SDL_CONTROLLER_BUTTON_START))     mask |= 0x010;
         if (SDL_GameControllerGetButton(g_gamepad, SDL_CONTROLLER_BUTTON_BACK))      mask |= 0x020;
         if (SDL_GameControllerGetButton(g_gamepad, SDL_CONTROLLER_BUTTON_LEFTSHOULDER))  mask |= 0x040;
