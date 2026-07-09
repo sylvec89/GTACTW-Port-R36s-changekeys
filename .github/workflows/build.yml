@@ -5,32 +5,22 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Enable armhf
+      - name: Install compiler
         run: |
-          sudo dpkg --add-architecture armhf
           sudo apt-get update
-
-      - name: Install toolchain
-        run: |
           sudo apt-get install -y \
-            gcc-arm-linux-gnueabihf \
-            libsdl2-dev:armhf \
-            libopenal-dev:armhf \
-            libgles2-mesa-dev:armhf \
-            libegl1-mesa-dev:armhf \
-            libz-dev:armhf
+            make \
+            gcc-arm-linux-gnueabihf
+
+      - name: Show repository
+        run: |
+          echo "===== Repository tree ====="
+          find . -maxdepth 3
 
       - name: Build
         run: make
-
-      - name: Upload binary
-        uses: actions/upload-artifact@v4
-        with:
-          name: gtactw_r36
-          path: gtactw_r36
